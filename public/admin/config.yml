@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: "DGA-Thailand/dga-legal-docs"
   branch: main
 
 media_folder: "public/images"
