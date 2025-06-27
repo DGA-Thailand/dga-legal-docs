@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "privacy"
+    label: "ประกาศความเป็นส่วนตัว"
+    folder: "content/privacy"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "ชื่อเรื่อง", name: "title", widget: "string" }
+      - { label: "คำอธิบาย", name: "description", widget: "text" }
+      - { label: "เวอร์ชัน", name: "version", widget: "string" }
+      - { label: "อัปเดตล่าสุด", name: "lastUpdated", widget: "datetime" }
+      - { label: "วันที่มีผลบังคับใช้", name: "effectiveDate", widget: "datetime" }
+      - { label: "เนื้อหา", name: "body", widget: "markdown" }
+
+  - name: "terms"
+    label: "ข้อกำหนดและเงื่อนไข"
+    folder: "content/terms"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "ชื่อเรื่อง", name: "title", widget: "string" }
+      - { label: "คำอธิบาย", name: "description", widget: "text" }
+      - { label: "เวอร์ชัน", name: "version", widget: "string" }
+      - { label: "อัปเดตล่าสุด", name: "lastUpdated", widget: "datetime" }
+      - { label: "วันที่มีผลบังคับใช้", name: "effectiveDate", widget: "datetime" }
+      - { label: "เนื้อหา", name: "body", widget: "markdown" }
