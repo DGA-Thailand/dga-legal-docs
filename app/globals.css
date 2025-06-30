@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .prose {
-  @apply text-gray-700;
+  @apply text-gray-700 pt-4;
 }
 
 .prose h1,
@@ -12,7 +12,7 @@
 .prose h4,
 .prose h5,
 .prose h6 {
-  @apply text-gray-900;
+  @apply text-gray-900 font-bold text-xl mt-4 my-4;
 }
 
 .prose a {
@@ -33,4 +33,34 @@
 
 .prose pre code {
   @apply bg-transparent p-0;
+}
+
+.prose ul,
+.prose ol {
+  @apply pl-6;
+}
+.prose li {
+  @apply mb-2 text-gray-700;
+} 
+
+.table {
+  @apply w-full border-solid border-gray-700 text-sm;
+}
+
+.header {
+  @apply border border-solid border-gray-700 align-top px-4 py-2;
+}
+.even {
+  @apply bg-gray-50 border border-solid border-gray-700 align-top px-4 py-2;
+}
+.even ul {
+  list-style-type: "- ";
+  padding-left: 1rem;
+}
+.odd {
+  @apply bg-white border border-solid border-gray-700 align-top px-4 py-2;
+}
+.odd ul {
+  list-style-type: "- ";
+  padding-left: 1rem;
 }

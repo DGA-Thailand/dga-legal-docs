@@ -1,6 +1,7 @@
 import { getContent, getContentBySlug } from "@/lib/content"
 import { notFound } from "next/navigation"
-import ReactMarkdown from "react-markdown"
+import MarkDown from "react-markdown"
+import rehypeRaw from "rehype-raw"
 
 interface PrivacyNoticePageProps {
   params: Promise<{ slug: string }>
@@ -20,22 +21,27 @@ export default async function PrivacyNoticePage({ params }: PrivacyNoticePagePro
   if (!notice) {
     notFound()
   }
-
+  
   return (
     <div className="min-h-screen bg-white py-16 px-4">
       <article className="max-w-3xl mx-auto">
         <header className="mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">{notice.title}</h1>
-          <div className="flex items-center space-x-6 text-sm text-gray-600 border-b border-gray-200 pb-6">
-            <span>เวอร์ชัน {notice.version}</span>
-            <time dateTime={notice.lastUpdated}>
-              อัปเดตล่าสุด: {new Date(notice.lastUpdated).toLocaleDateString("th-TH")}
-            </time>
-            <span>มีผลบังคับใช้: {new Date(notice.effectiveDate).toLocaleDateString("th-TH")}</span>
-          </div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4 text-center">{notice.title}</h1>
         </header>
-        <div className="prose prose-lg max-w-none">
-          <ReactMarkdown>{notice.body}</ReactMarkdown>
+        <div className="prose prose-lg max-w-none [&_p]:mb-4">
+          <MarkDown rehypePlugins={[rehypeRaw]}>
+            {String(notice.body)}
+          </MarkDown>
+        </div>
+        <div className="my-12">
+          <hr className="border-t border-gray-300" />
+        </div>
+        <div className="flex items-center space-x-6 text-sm text-gray-600 border-b border-gray-200 pb-6 max-w-none mx-auto">
+          <span>เวอร์ชัน {notice.version}</span>
+          <time dateTime={notice.lastUpdated}>
+            อัปเดตล่าสุด: {new Date(notice.lastUpdated).toLocaleDateString("th-TH")}
+          </time>
+          <span>มีผลบังคับใช้: {new Date(notice.effectiveDate).toLocaleDateString("th-TH")}</span>
         </div>
       </article>
     </div>
