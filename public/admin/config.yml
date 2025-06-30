@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: "DGA-Thailand/dga-legal-docs"
-  branch: main
+  branch: dev
 
 media_folder: "public/images"
 public_folder: "/images"
