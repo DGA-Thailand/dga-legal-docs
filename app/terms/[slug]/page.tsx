@@ -1,7 +1,8 @@
 import { getContent, getContentBySlug } from "@/lib/content"
 import { notFound } from "next/navigation"
-import Markdown from "react-markdown"
+import MarkDown from "react-markdown"
 import rehypeRaw from "rehype-raw"
+import remarkGfm from "remark-gfm"
 
 interface TermsPageProps {
   params: Promise<{ slug: string }>
@@ -28,8 +29,10 @@ export default async function TermsDetailPage({ params }: TermsPageProps) {
         <header className="mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4 text-center">{term.title}</h1>
         </header>
-        <div className="prose prose-lg max-w-none [&_p]:mb-4">
-          <Markdown rehypePlugins={[rehypeRaw]}>{term.body}</Markdown>
+        <div className="prose prose-lg max-w-none [&_p]:mb-4 [&_table]:border [&_table]:border-gray-700 [&_table]:border-collapse [&_th]:border [&_th]:border-gray-700 [&_td]:border [&_td]:border-gray-700">
+          <MarkDown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>
+            {String(term.body)}
+          </MarkDown>
         </div>
         <div className="my-12">
           <hr className="border-t border-gray-300" />

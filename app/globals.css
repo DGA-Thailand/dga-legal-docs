@@ -43,7 +43,7 @@
   @apply mb-2 text-gray-700;
 } 
 
-.table {
+.prose table {
   @apply w-full border-solid border-gray-700 text-sm;
 }
 
