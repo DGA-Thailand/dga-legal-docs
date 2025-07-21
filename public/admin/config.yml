@@ -1,7 +1,12 @@
 backend:
+<<<<<<< HEAD
   name: github
   repo: "DGA-Thailand/dga-legal-docs"
   branch: dev
+=======
+  name: git-gateway
+  branch: main
+>>>>>>> main
 
 media_folder: "public/images"
 public_folder: "/images"
