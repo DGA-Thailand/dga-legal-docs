@@ -43,15 +43,10 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
-<<<<<<< HEAD
-=======
-    "date-fns": "4.1.0",
->>>>>>> main
     "embla-carousel-react": "8.5.1",
     "font": "^0.0.4",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
-<<<<<<< HEAD
     "html": "^1.0.0",
     "input-otp": "1.4.1",
     "lucide-react": "^0.454.0",
@@ -59,21 +54,11 @@
     "next-themes": "^0.4.4",
     "path": "latest",
     "react": "^19.0.0",
-=======
-    "input-otp": "1.4.1",
-    "lucide-react": "^0.454.0",
-    "next": "^15.1.0",
-    "next-themes": "^0.4.4",
-    "path": "latest",
-    "react": "^19.0.0",
-    "react-day-picker": "8.10.1",
->>>>>>> main
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.1",
     "react-markdown": "^9.1.0",
     "react-resizable-panels": "^2.1.7",
     "recharts": "2.15.0",
-<<<<<<< HEAD
     "rehype-raw": "^7.0.0",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",
@@ -81,12 +66,6 @@
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
-=======
-    "sonner": "^1.7.1",
-    "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7",
-    "vaul": "^0.9.6",
->>>>>>> main
     "zod": "^3.24.1"
   },
   "devDependencies": {
