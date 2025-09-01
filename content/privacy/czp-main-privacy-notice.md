@@ -162,3 +162,4 @@ effectiveDate: "2025-07-18T00:00:00.000Z"
 - 1.	[ทางรัฐ Wallet](/privacy/czp-wallet-privacy-policy)
 - 2.	[ระบบลงทะเบียนอาสาสมัครกู้ภัยผ่านแอปพลิเคชันทางรัฐ](/privacy/czp-rescue-volunteers-privacy-policy)
 - 3.  [ระบบลงทะเบียนรถไฟฟ้า 20 บาทตลอดสาย (สำหรับผู้ใช้บริการรถไฟฟ้า)](/privacy/czp-20baht-skytrain-privacy-policy)
+- 4.  [ระบบลงทะเบียนรถไฟฟ้า 20 บาทตลอดสาย (สำหรับเจ้าหน้าที่ ณ จุดบริการ)](/privacy/czp-20baht-skytrain-officer-privacy-policy)
